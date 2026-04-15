@@ -23,5 +23,5 @@ description: 运行 SonarQube Cloud 扫描，自动修复问题，验证 Quality
    - Quality Gate 状态
 
 5. 输出报告后停止。
-   提示：✅ 阶段 5 完成。Quality Gate 已通过，确认后输入 [继续] 进入 Git 提交阶段。
-   如果 Quality Gate 未通过，提示：❌ 阶段 5 失败。已达 3 轮修复上限，以下问题需人工处理：[列表]
+   提示：✅ SonarQube 扫描完成。Quality Gate 已通过，确认后输入 [继续] 进入下一阶段。
+   如果 Quality Gate 未通过，提示：❌ SonarQube 扫描失败。已达 3 轮修复上限，以下问题需人工处理：[列表]

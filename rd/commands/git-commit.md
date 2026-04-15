@@ -27,4 +27,4 @@ description: 展示变更摘要和 commit message 供 review，确认后执行 g
    git commit -m "{确认的 commit message}"
 
    输出 commit hash，然后停止。
-   提示：✅ 阶段 6 完成。确认后输入 [继续] 进入 Docker 构建阶段。
+   提示：✅ Git 提交完成。确认后输入 [继续] 进入下一阶段。

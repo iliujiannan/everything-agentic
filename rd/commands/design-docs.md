@@ -99,9 +99,9 @@ pandoc ".claude/docs/output/$ARGUMENTS/api-design.md" \
 包含：
 - 新增或修改的表清单
 - 每张表的字段定义（字段名、类型、约束、说明）
-- MySQL 5.7 兼容性说明（特别注意 DATETIME、JSON 类型）
+- 数据库兼容性说明（如 DATETIME 毫秒精度、JSON 类型支持等）
 - 索引设计及理由
-- 完整的 Flyway migration SQL（`V{N}__{描述}.sql`）
+- 完整的 Flyway migration SQL（命名格式：`V{N}__{描述}.sql`）
 
 ---
 
@@ -117,4 +117,4 @@ pandoc ".claude/docs/output/$ARGUMENTS/api-design.md" \
 ---
 
 所有文档全部生成完毕后，输出文档路径清单，然后停止。
-提示：✅ 阶段 2 完成。请 review 以上设计文档，确认后输入 [继续] 进入编码阶段。
+提示：✅ 设计文档生成完成。请 review 以上文档，确认后输入 [继续] 进入下一阶段。
