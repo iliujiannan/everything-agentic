@@ -2,31 +2,45 @@
 
 > Enterprise Claude Code Harness Engineering Template
 
-A production-ready template repository for integrating [Claude Code](https://claude.ai/code) into enterprise R&D workflows. Package your team's accumulated skills, agents, hooks, and rules into a reusable harness.
+A production-ready template repository for integrating [Claude Code](https://claude.ai/code) into enterprise workflows. Package your team's accumulated skills, agents, hooks, and rules into reusable domain-specific harnesses.
 
 [中文文档](./README.zh-CN.md)
 
-## What's Inside
+## Repository Structure
+
+This repository is organized by domain. Each domain is a self-contained harness directory.
+
+```
+everything-agentic/
+├── rd/          # R&D / Software Engineering
+└── ...          # More domains coming (ops, data, security, etc.)
+```
+
+## Domains
+
+### `rd/` — Software Engineering
+
+Claude Code harness for software R&D workflows.
 
 | Directory | Purpose |
 |-----------|---------|
-| `agents/` | Specialized sub-agent definitions |
-| `skills/` | Domain-specific skill bundles |
-| `commands/` | Custom slash command definitions |
-| `rules/` | Layered coding and workflow rules |
-| `hooks/` | Event-driven automation scripts |
-| `settings/` | Claude Code settings templates |
-| `templates/` | Project-level CLAUDE.md starters |
-| `enterprise/` | Governance, audit, and permission templates |
-| `docs/` | Extended documentation |
+| `rd/agents/` | Specialized sub-agent definitions |
+| `rd/skills/` | Domain-specific skill bundles |
+| `rd/commands/` | Custom slash command definitions |
+| `rd/rules/` | Layered coding and workflow rules |
+| `rd/hooks/` | Event-driven automation scripts |
+| `rd/settings/` | Claude Code settings templates |
+| `rd/templates/` | Project-level CLAUDE.md starters |
+| `rd/enterprise/` | Governance, audit, and permission templates |
+| `rd/docs/` | Extended documentation |
 
 ## Quick Start
 
-1. Browse the directories above and copy what fits your project
-2. Place agents in `~/.claude/agents/`
-3. Place rules in `~/.claude/rules/`
+1. Pick a domain directory (e.g., `rd/`)
+2. Copy agents to `~/.claude/agents/`
+3. Copy rules to `~/.claude/rules/`
 4. Merge settings into `~/.claude/settings.json`
-5. Add a `CLAUDE.md` from `templates/` to your project root
+5. Add a `CLAUDE.md` from `rd/templates/` to your project root
 
 ## Philosophy
 
