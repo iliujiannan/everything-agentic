@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate JSON files
+        run: |
+          find . -name "*.json" -not -path "*/node_modules/*" | while read f; do
+            python3 -m json.tool "$f" > /dev/null || (echo "Invalid JSON: $f" && exit 1)
+          done
+
+      - name: Check rules zh/ mirrors common/
+        run: |
+          common_files=$(ls rules/common/ 2>/dev/null | sort)
+          zh_files=$(ls rules/zh/ 2>/dev/null | sort)
+          if [ "$common_files" != "$zh_files" ]; then
+            echo "ERROR: rules/zh/ and rules/common/ file lists differ"
+            echo "common/: $common_files"
+            echo "zh/:     $zh_files"
+            exit 1
+          fi
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            **/*.md
+            !node_modules/**
+        continue-on-error: true

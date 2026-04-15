@@ -1,0 +1,47 @@
+# everything-agentic
+
+> 企业级 Claude Code Harness 工程模板
+
+一个生产就绪的模板仓库，用于将 [Claude Code](https://claude.ai/code) 集成到企业研发流程中。将团队沉淀的 skills、agents、hooks 和 rules 打包为可复用的 Harness 工程。
+
+[English](./README.md)
+
+## 目录说明
+
+| 目录 | 用途 |
+|------|------|
+| `agents/` | 专用子 Agent 定义文件 |
+| `skills/` | 领域特定的 Skill 包 |
+| `commands/` | 自定义斜杠命令定义 |
+| `rules/` | 分层编码与工作流规则 |
+| `hooks/` | 事件驱动的自动化脚本 |
+| `settings/` | Claude Code 配置模板 |
+| `templates/` | 项目级 CLAUDE.md 起始模板 |
+| `enterprise/` | 治理、审计与权限模板 |
+| `docs/` | 扩展文档 |
+
+## 快速开始
+
+1. 浏览上述目录，选取适合你项目的内容
+2. 将 agents 放到 `~/.claude/agents/`
+3. 将 rules 放到 `~/.claude/rules/`
+4. 将 settings 合并到 `~/.claude/settings.json`
+5. 从 `templates/` 中选一个 `CLAUDE.md` 放到项目根目录
+
+## 设计理念
+
+本 Harness 遵循分层配置模型：
+
+- **Rules** — 定义标准和检查清单（做什么）
+- **Skills** — 提供深度领域知识（怎么做）
+- **Agents** — 委派专项子任务（谁来做）
+- **Hooks** — 在生命周期事件中强制执行自动化（什么时候做）
+- **Commands** — 将常用工作流暴露为斜杠命令（怎么触发）
+
+## 贡献
+
+参见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+
+## 许可证
+
+MIT

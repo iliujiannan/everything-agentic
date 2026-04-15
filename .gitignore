@@ -1,0 +1,40 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Secrets
+*.env
+.env*
+*.key
+*.pem
+*.p12
+*.jks
+secrets/
+
+# Logs
+*.log
+logs/
+
+# Temp
+*.tmp
+*.swp
+*~
