@@ -1,0 +1,10 @@
+{
+  "name": "ear",
+  "plugins": [
+    {
+      "name": "ear",
+      "source": "..",
+      "version": "1.0.0"
+    }
+  ]
+}

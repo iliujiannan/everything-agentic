@@ -1,0 +1,8 @@
+{
+  "name": "ear",
+  "version": "1.0.0",
+  "description": "Enterprise Agentic R&D harness — 企业级研发 Claude Code Harness",
+  "agents": [],
+  "skills": ["./skills/"],
+  "commands": ["./commands/"]
+}
