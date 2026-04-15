@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd D:/code-tt/everything-agentic && git add -A && (git diff --cached --quiet || (git commit -m \"auto: session checkpoint\" && git push)) 2>/dev/null || true",
+            "statusMessage": "Auto-committing session changes..."
+          }
+        ]
+      }
+    ]
+  }
+}
