@@ -25,10 +25,10 @@ jobs:
 
       - name: Check rules zh/ mirrors common/
         run: |
-          common_files=$(ls rules/common/ 2>/dev/null | sort)
-          zh_files=$(ls rules/zh/ 2>/dev/null | sort)
+          common_files=$(ls rd/rules/common/ 2>/dev/null | sort)
+          zh_files=$(ls rd/rules/zh/ 2>/dev/null | sort)
           if [ "$common_files" != "$zh_files" ]; then
-            echo "ERROR: rules/zh/ and rules/common/ file lists differ"
+            echo "ERROR: rd/rules/zh/ and rd/rules/common//common/ file lists differ"
             echo "common/: $common_files"
             echo "zh/:     $zh_files"
             exit 1
