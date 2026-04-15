@@ -37,10 +37,27 @@ Claude Code harness for software R&D workflows.
 ## Quick Start
 
 1. Pick a domain directory (e.g., `rd/`)
-2. Copy agents to `~/.claude/agents/`
+2. Copy agents to `.claude/agents/` in your project
 3. Copy rules to `~/.claude/rules/`
 4. Merge settings into `~/.claude/settings.json`
-5. Add a `CLAUDE.md` from `rd/templates/` to your project root
+5. Copy `rd/templates/CLAUDE.md` to your project root and fill in the placeholders
+6. Copy `rd/templates/tech-stack.md` to `.claude/docs/tech-stack.md` and describe your stack
+
+### Workflow
+
+The `rd/` harness ships a complete **Orchestrator + Subagent** R&D workflow:
+
+```
+workflow-orchestrator  →  subagent-plan
+                       →  subagent-design-docs
+                       →  subagent-code
+                       →  subagent-test
+                       →  subagent-sonar       (loop ≤ 3)
+                       →  subagent-git
+                       →  subagent-deploy      (Docker build + K8s deploy)
+```
+
+Each stage runs in an isolated context window, stops after completing, and waits for `[继续]` before the next stage starts. See [`rd/docs/workflow-architecture.md`](rd/docs/workflow-architecture.md) for the full design.
 
 ## Philosophy
 

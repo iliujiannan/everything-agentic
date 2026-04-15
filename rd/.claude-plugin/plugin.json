@@ -5,7 +5,7 @@
   "dependencies": {
     "ecc@ecc": ">=1.0.0"
   },
-  "agents": [],
+  "agents": ["./agents/"],
   "skills": ["./skills/"],
   "commands": ["./commands/"]
 }
