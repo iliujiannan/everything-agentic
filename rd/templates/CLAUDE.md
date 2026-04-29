@@ -35,6 +35,20 @@
 | 6 | Git 提交 | 自定义命令 | subagent-git → `/git-commit` |
 | 7 | 构建 & 部署 | 自定义命令 | subagent-deploy → `/docker-build` + `/k8s-deploy` |
 
+## 独立命令
+
+| 命令 | 说明 |
+|------|------|
+| `/rd-plan <需求>` | 需求全流程入口（8 阶段） |
+| `/bugfix <描述>` | Bug 修复（轻量工作流） |
+| `/sonarfix [模块]` | Sonar 专项修复（最简流程） |
+| `/sonar-my-bugs` | SonarQube Bug 查询与修复（交互式） |
+| `/code-review` | 代码审查（ECC 原生） |
+| `/tdd` | TDD 驱动实现（ECC 原生） |
+| `/test-coverage` | 测试覆盖率分析（ECC 原生） |
+
+> 首次使用？运行项目初始化引导：让 Claude 执行 `subagent-setup` agent。
+
 ## 强制规则
 
 | # | 规则 |
